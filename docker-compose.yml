@@ -1,0 +1,23 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: cartloop_chat
+      POSTGRES_DB: cartloop_chat
+      POSTGRES_PASSWORD: cartloop_chat123
+    volumes:
+      - pgdata:/var/lib/posgresql/data
+  cartloop:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes: 
+      - .:/app/
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db
+volumes:
+  pgdata:

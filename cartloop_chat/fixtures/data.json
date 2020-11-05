@@ -1,0 +1,67 @@
+[
+  {
+    "model": "cartloop_chat.client",
+    "pk": 634,
+    "fields": {
+      "username": "cartloop_customer1"
+    }
+  },
+  {
+    "model": "cartloop_chat.client",
+    "pk": 635,
+    "fields": {
+      "username": "cartloop_customer2"
+    }
+  },
+  {
+    "model": "cartloop_chat.operator",
+    "pk": 334,
+    "fields": {
+      "name": "operator_first"
+    }
+  },
+  {
+    "model": "cartloop_chat.operator",
+    "pk": 335,
+    "fields": {
+      "name": "operator_second"
+    }
+  },
+  {
+    "model": "cartloop_chat.conversation",
+    "pk": 1234,
+    "fields": {
+      "storeId": 23,
+      "operator_id": 334,
+      "client_id": 634,
+      "operatorGroup": "sales"
+    }
+  },
+  {
+    "model": "cartloop_chat.chat",
+    "pk": 92,
+    "fields": {
+      "payload": "Hello how are you today",
+      "client_id": 635,
+      "conversation_id": 1234
+    }
+  },
+  {
+    "model": "cartloop_chat.chat",
+    "pk": 123,
+    "fields": {
+      "payload": "Hello how are you today",
+      "client_id": 634,
+      "conversation_id": 1234
+    }
+  },
+  {
+    "model": "cartloop_chat.chat",
+    "pk": 148,
+    "fields": {
+      "payload": "Hello how are you today",
+      "client_id": 634,
+      "conversation_id": 1234
+    }
+  }
+]
